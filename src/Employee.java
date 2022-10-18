@@ -46,16 +46,13 @@ public class Employee {
 
     public double raiseSalary() {
         int thisYear = 2021;
-        double salaryIncrease;
-        double salaryWithTaxAndBonus = salary - tax() + bonus();
         int numberOfEmpYears = thisYear - hireYear;
         if (numberOfEmpYears < 10) {
-            salaryIncrease = salaryWithTaxAndBonus * 0.05;
+            return this.salary * 0.05;
         } else if (numberOfEmpYears < 20) {
-            salaryIncrease = salaryWithTaxAndBonus * 0.1;
+            return this.salary * 0.1;
         } else {
-            salaryIncrease = salaryWithTaxAndBonus * 0.15;
+            return this.salary * 0.15;
         }
-        return salaryIncrease;
     }
 }
